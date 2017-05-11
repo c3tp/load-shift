@@ -4,11 +4,16 @@ metadata:
   name: nginxservice
   labels:
     app: nginx
+    role: service
+    tier: backend
 spec:
   ports:
-  - port: 80
+  - port: 9001
     targetPort: 80
     protocol: TCP
+    nodePort: 32699
   selector:
     app: nginx
+    role: main-container
+    tier: backend
   type: NodePort
