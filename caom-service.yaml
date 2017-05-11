@@ -6,14 +6,15 @@ metadata:
     app: caom2repo
     role: service
     tier: backend
+    ter: data
 spec:
   ports:
   - port: 9001
-    targetPort: 80
+    targetPort: 8080
     protocol: TCP
-    nodePort: 32699
+    nodePort: 32700
   selector:
     app: caom2repo
-    role: container
-    tier: backend-2 
+    role: main-container
+    tier: backend
   type: NodePort

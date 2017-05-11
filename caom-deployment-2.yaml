@@ -39,5 +39,5 @@ spec:
             exec:
               command: ["/bin/sh", "-c", "rm /tmp/healthy && sleep 70s"]
       nodeSelector:
-        area: one
+        area: two
       terminationGracePeriodSeconds: 120
