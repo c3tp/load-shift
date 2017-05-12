@@ -1,0 +1,22 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: caom2repodeploy
+  labels:
+   app: caom2repo
+   role: main-deploy
+   tier: backend
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: caom2repo
+        role: main-container
+        tier: backend
+    spec: 
+      containers:
+      - name: caom2repo
+        image: c3tp/caom2repo
+        ports:
+        - containerPort: 8080

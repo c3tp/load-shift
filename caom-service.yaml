@@ -6,7 +6,6 @@ metadata:
     app: caom2repo
     role: service
     tier: backend
-    ter: data
 spec:
   ports:
   - port: 9001
