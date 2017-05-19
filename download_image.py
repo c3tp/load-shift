@@ -23,7 +23,7 @@ def repeatedly_download(url, period):
     while True:
         loop_beginning_time = datetime.now()
         response = requests.get(url)
-        print response
+        print response.content
         remaining_time = datetime.now() - loop_beginning_time
         if remaining_time <= timedelta(seconds=period):
             time.sleep((timedelta(seconds=period) - remaining_time).total_seconds())
